@@ -8,8 +8,10 @@
 <body>
 <!-- NAVBAR -->
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  <a class="navbar-brand" href="/">Home</a>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: black;">
+	  <a class="navbar-brand" href="/">
+	  	<img src="/images/homeicon.png">
+	  </a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -17,7 +19,7 @@
 	    <ul class="navbar-nav">
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Quick Look
+	        	At A Glance
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	          <a class="dropdown-item" href="/Denver">Denver</a>
@@ -30,9 +32,33 @@
 	    </ul>
 	  </div>
 	</nav>
-	
-<h1>Denver</h1>
-<a href="/Kansas-City">Next</a>
+<h1>Denver, Colorado</h1>
+<div id="aboutLocation" class="container-fluid">
+	<div class="row">
+		<div class="col-md-12, col-lg-12, col-xl-6">
+			<img src="/images/denver1200x800.jpg">
+		</div>
+		<div class="col-md-12, col-lg-12, col-xl-6">
+			<h3>About: </h3>
+			<p id="aboutLocationParagraph">"Denver is the capital and most populous municipality of the U.S. state of Colorado. Denver is in the South Platte River Valley on the western edge of the High Plains just east of the Front Range of the Rocky Mountains. The Denver downtown district is immediately east of the confluence of Cherry Creek with the South Platte River, approximately 12 mi (19 km) east of the foothills of the Rocky Mountains. Denver is nicknamed the Mile-High City because its official elevation is exactly one mile (5280 feet or 1609.3 meters) above sea level, making it the highest major city in the United States..." <a href="https://en.wikipedia.org/wiki/Denver" target="_blank">Read More</a></p>
+			<div id="toDoLocation"><h3>Things to do:</h3>
+			<ul>
+				<li>Hiking</li>
+				<li>Skiing</li>
+				<li>Climbing</li>
+			</ul>
+			</div>
+		</div>
+	</div>	
+</div>
+<div id="linkDiv" class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<a href="/Kansas-City">Next</a>
+		</div>
+	</div>	
+</div>
+			
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+
+	font-family: 'Oswald', sans-serif;
+
+}
+
+img {
+	
+	/*position: relative;*/
+	width: 600px;
+	height: 400px;
+}
+
+#aboutLocation img {
+	
+	margin: 2rem;
+
+}
+
+h1 {
+
+	padding: 1rem;
+	padding-bottom: 0;
+}
+
+#aboutLocationParagraph {
+
+	margin-right: 1.5rem;
+}
+
+.navbar-dark {
+
+	border: 3px solid black;
+	padding: 0;
+	padding-left: 1rem;
+
+}
+
+.navbar-brand img {
+    
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+
+}
+
+#linkDiv {
+
+	display: inline-block;
+	margin:auto;
+	background-color: black; 
+	text-align: center;
+	width: 20rem;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 2rem;
+	margin: 2rem;
+	border-radius: 1rem;
+	border: 3px solid black;
+
+}
+
+#linkDiv a {
+
+	color: white;
+}
+
+#linkDiv a:hover {
+
+	text-decoration: none;
+	transform: scale(2);
+}

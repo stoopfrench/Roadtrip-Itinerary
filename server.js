@@ -8,49 +8,49 @@ app.get('/', function(request, response){
 
  	response.sendFile('./public/html/index.html', {root: './'})
 
- 	console.log('sent a file')
+ 	console.log('sent index.html')
 })
 
 app.get('/Denver', function(request, response){
 
 	response.sendFile('./public/html/denver.html', {root: './'})
 
-	console.log('sent denver html')
+	console.log('sent denver.html')
 })
 
 app.get('/Kansas-City', function(request, response){
 
 	response.sendFile('./public/html/kansas-city.html', {root: './'})
 
-	console.log('sent kansas-city html')
+	console.log('sent kansas-city.html')
 })
 
 app.get('/Nashville', function(request, response){
 
 	response.sendFile('./public/html/nashville.html', {root: './'})
 
-	console.log('sent nashville html')
+	console.log('sent nashville.html')
 })
 
 app.get('/Atlanta', function(request, response){
 
 	response.sendFile('./public/html/atlanta.html', {root: './'})
 
-	console.log('sent atlanta html')
+	console.log('sent atlanta.html')
 })
 
 app.get('/Charleston', function(request, response){
 
 	response.sendFile('./public/html/charleston.html', {root: './'})
 
-	console.log('sent charleston html')
+	console.log('sent charleston.html')
 })
 
 app.get('/End', function(request, response){
 
 	response.sendFile('./public/html/end.html', {root: './'})
 
-	console.log('sent end html')
+	console.log('sent end.html')
 })
 
 

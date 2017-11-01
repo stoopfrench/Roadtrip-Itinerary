@@ -8,8 +8,10 @@
 <body>
 <!-- NAVBAR -->
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  <a class="navbar-brand" href="/">Home</a>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: black;">
+	  <a class="navbar-brand" href="/">
+	  	<img src="/images/homeicon.png">
+	  </a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -17,7 +19,7 @@
 	    <ul class="navbar-nav">
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Quick Look
+	          At A Glance
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	          <a class="dropdown-item" href="/Denver">Denver</a>
@@ -31,8 +33,33 @@
 	  </div>
 	</nav>
 	
-<h1>Kansas City</h1>
-<a href="/Nashville">Next</a>
+<h1>Kansas City, Missouri</h1>
+<div id="aboutLocation" class="container-fluid">
+	<div class="row">
+		<div class="col-md-12, col-lg-12, col-xl-6">
+			<img src="/images/kansas city1200x800.jpg">
+		</div>
+		<div class="col-md-12, col-lg-12, col-xl-6">
+			<h3>About: </h3>
+			<p id="aboutLocationParagraph">"Kansas City is the largest city in Missouri, United States. According to the U.S. Census Bureau, the city had an estimated population of 481,420 in 2016,[6] making it the 37th largest city by population in the United States. It is the central city of the Kansas City metropolitan area, which straddles the Kansas–Missouri border. Kansas City was founded in the 1830s as a Missouri River port at its confluence with the Kansas River coming in from the west. On June 1, 1850 the town of Kansas was incorporated; shortly after came the establishment of the Kansas Territory. Confusion between the two ensued and the name Kansas City was assigned to distinguish them soon thereafter." <a href="https://en.wikipedia.org/wiki/Kansas_City,_Missouri" target="_blank">Read More</a></p>
+			<div id="toDoLocation"><h3>Things to do:</h3>
+			<ul>
+				<li>Wait to be killed by a tornado</li>
+				<li>See for miles</li>
+				<li>Eating</li>
+			</ul>
+			</div>
+		</div>
+	</div>	
+</div>
+<div id="linkDiv" class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<a href="/Nashville">Next</a>
+		</div>
+	</div>	
+</div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
