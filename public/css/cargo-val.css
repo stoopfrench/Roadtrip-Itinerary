@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+
+	font-family: 'Oswald', sans-serif;
+}
+
+button {
+
+	cursor: pointer;
+}
+
+h1 {
+
+	font-size: 3.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.navbar-dark .navbar-toggler {
+
+	outline: none;
+	cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    
+    color: rgba(255,255,255,1);
+}
+
+.navbar-brand img {
+    
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+
+}
+
+.navbar-dark {
+
+	border: 3px solid black;
+	padding: 0;
+	padding-left: 1rem;
+
+}
+
+.image {
+
+	box-sizing: border-box;
+	border: 3px solid black;
+	border-radius: .5rem;
+	width: 220px;
+	height: 220px;
+	text-align: center;
+	padding: .5rem;
+	background-color: #dedede;
+
+
+}
+
+.cargo {
+
+	border: 3px solid black;
+	padding: 2rem;
+}
+
+.box {
+
+	margin-top: 1rem;
+}
+
+#submit {
+
+	text-align: right;
+	margin: 2rem;
+
+}
+
+#cargoSubmitButton {
+
+	background-color: #353A3F;
+	color: white;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.btn {
+
+	width: 110px;
+	box-sizing: border-box;
+	border: 2px solid black;
+	font-size: 1.5rem;
+	background-color: #353A3F;
+}
+
+#totalDisplay {
+
+	border-top: 3px solid black;
+}
+
+

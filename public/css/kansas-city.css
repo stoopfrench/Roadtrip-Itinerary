@@ -13,6 +13,12 @@ img {
 	height: 400px;
 }
 
+.navbar-dark .navbar-toggler {
+
+	outline: none;
+	cursor: pointer;
+}
+
 #aboutLocation img {
 	
 	margin: 2rem;
@@ -28,6 +34,11 @@ h1 {
 #aboutLocationParagraph {
 
 	margin-right: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    
+    color: rgba(255,255,255,1);
 }
 
 .navbar-dark {
@@ -50,7 +61,7 @@ h1 {
 
 	display: inline-block;
 	margin:auto;
-	background-color: black; 
+	background-color: #353A3F; 
 	text-align: center;
 	width: 20rem;
 	position: absolute;

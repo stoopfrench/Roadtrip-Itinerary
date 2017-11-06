@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/cargo-val.css">
+	<title>Cargo Validator</title>
+</head>
+<body>
+<!-- NAVBAR -->
+
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="background-color: black;">
+	  <a class="navbar-brand" href="/">
+		<img src="/images/homeicon.png">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	</nav>
+	
+	<h1>Cargo Validator</h1>
+	
+	<div id="totalDisplay">
+		<div class="container">
+			<div class="row">
+				<div id="totalPrice" class="col-md-12 col-lg-6">
+					<h3>Total: $ <span id="totalPriceDisplay">0.00</span></h3>
+				</div>
+				<div id="totalWeight" class="col-md-12 col-lg-6">
+					<h3>Weight: <span id="totalWeightDisplay">0.00</span> lbs</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Cargo Display -->
+	<div class="cargo">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-12 box">
+					<div>
+						<p><b>Count: </b><span class="toilet-paper-display">0</span></p>
+					</div>
+					<div class="image">
+					<img src="/images/toilet paper roll.png" alt="">
+					</div>
+					<div class="btn-group" role="group" aria-label="Basic example">
+					<button id="toiletPaperMinus" type="button" class="btn btn-secondary">-</button>
+					<button id="toiletPaperPlus" type="button" class="btn btn-secondary">+</button>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 box">
+					<div>
+						<p><b>Count: </b><span class="lunch-box-display">0</span></p>
+					</div>
+					<div class="image">
+					<img src="/images/Lunch-box.png" alt="">
+					</div>
+					<div class="btn-group" role="group" aria-label="Basic example">
+					<button id="lunchBoxMinus" type="button" class="btn btn-secondary">-</button>
+					<button id="lunchBoxPlus" type="button" class="btn btn-secondary">+</button>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 box">
+					<div>
+						<p><b>Count: </b><span class="water-display">0</span></p>
+					</div>
+					<div class="image">
+					<img src="/images/water bottle.jpg" alt="">
+					</div>
+					<div class="btn-group" role="group" aria-label="Basic example">
+					<button id="waterMinus" type="button" class="btn btn-secondary">-</button>
+					<button id="waterPlus" type="button" class="btn btn-secondary">+</button>
+					</div>
+				</div>	
+				<div class="col-lg-3 col-md-6 col-sm-12 box">
+					<div>
+						<p><b>Count: </b><span class="vest-display">0</span></p>
+					</div>
+					<div class="image">
+					<img src="/images/bullet-proof-vest.jpg" alt="">
+					</div>
+					<div class="btn-group" role="group" aria-label="Basic example">
+					<button id="vestMinus" type="button" class="btn btn-secondary">-</button>
+					<button id="vestPlus" type="button" class="btn btn-secondary">+</button>
+					</div>
+				</div>
+			</div>
+			<div id="submit">
+				<div class="row">
+					<div class="col-12">
+						<input id="cargoSubmitButton" type="submit" name="Submit" value="Validate Cargo">
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="/js/cargo-val.js"></script>
+</body>
+</html>

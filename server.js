@@ -53,6 +53,14 @@ app.get('/End', function(request, response){
 	console.log('sent end.html')
 })
 
+app.get('/Cargo-Validator', function(request, response){
+
+	response.sendFile('./public/html/cargo-val.html', {root: './'})
+
+	console.log('sent cargo-val.html')
+})
+
+
 
 
 

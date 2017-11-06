@@ -5,6 +5,17 @@ body {
 	font-family: 'Oswald', sans-serif;
 }
 
+.navbar-dark .navbar-toggler {
+
+	outline: none;
+	cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    
+    color: rgba(255,255,255,1);
+}
+
 h1 {
 
 	position: relative;
