@@ -66,5 +66,5 @@ app.get('/Cargo-Validator', function(request, response){
 
 app.listen(8080, function(){
 
-	console.log('Running on port 8080')
+	console.log("'Roadtrip_Itinerary' on port 8080")
 })

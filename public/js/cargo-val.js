@@ -3,20 +3,20 @@ $(document).ready(function(){
 
 	
 	var tpCount = 0
-	var tpPrice = 6.50
-	var tpWeight = 1.5
+	var tpPrice = 11.85
+	var tpWeight = 3
 	
 	var lbCount = 0
-	var lbPrice = 30
-	var lbWeight = 1.5
+	var lbPrice = 29.99
+	var lbWeight = 5
 	
 	var vestCount = 0
 	var vestPrice = 75
 	var vestWeight = 6
 	
 	var waterCount = 0
-	var waterPrice = 16
-	var waterWeight = 28
+	var waterPrice = 15.78
+	var waterWeight = 27.9
 	
 	var totalPrice = 0
 	var totalWeight = 0
@@ -34,6 +34,8 @@ $(document).ready(function(){
 			tpCount--
 
 		}
+
+		console.log(totalPrice)
 
 		if(totalPrice > 0) {
 
@@ -84,14 +86,14 @@ $(document).ready(function(){
 
 		}
 
-		if(totalPrice > 0) {
+		if(totalPrice > 1) {
 
 			totalPrice -= lbPrice
 
 
 		}
 
-		if(totalWeight > 0) {
+		if(totalWeight > 1) {
 
 			totalWeight -= lbWeight
 
@@ -134,14 +136,14 @@ $(document).ready(function(){
 
 		}
 
-		if(totalPrice > 0) {
+		if(totalPrice > 1) {
 
 			totalPrice -= waterPrice
 
 
 		}
 
-		if(totalWeight > 0) {
+		if(totalWeight > 1) {
 
 			totalWeight -= waterWeight
 
@@ -183,14 +185,13 @@ $(document).ready(function(){
 
 		}
 
-		if(totalPrice > 0) {
+		if(totalPrice > 1) {
 
 			totalPrice -= vestPrice
 
-
 		}
 
-		if(totalWeight > 0) {
+		if(totalWeight > 1) {
 
 			totalWeight -= vestWeight
 
@@ -220,7 +221,35 @@ $(document).ready(function(){
 		$('#totalPriceDisplay').text(fixedPrice)
 		$('#totalWeightDisplay').text(fixedWeight)
 
-	})	
+	})
 
+	$('#cargoSubmitButton').on('click', function(){
+
+
+		if(totalPrice <= 200 && totalWeight  <= 200) {
+
+			$('#validateTitle').text('Congratulations')
+			$('#validateMessage').text('Cargo Valid')
+		}
+
+		if (totalPrice > 200 && totalWeight > 200) {
+
+			$('#validateTitle').text('Invalid Cargo')
+			$('#validateMessage').text('Over weight and over budget.')
+		}
+
+		if(totalPrice > 200 && totalWeight < 200) {
+
+			$('#validateTitle').text('Invalid Cargo')
+			$('#validateMessage').text('Over budget.')
+		}
+
+		if(totalWeight < 200 && totalWeight > 200) {
+
+			$('#validateMessage').text('Over the weight limit.')
+
+		} 
+	
+	})	
 
 })

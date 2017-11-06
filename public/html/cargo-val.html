@@ -7,6 +7,7 @@
 	<title>Cargo Validator</title>
 </head>
 <body>
+
 <!-- NAVBAR -->
 
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="background-color: black;">
@@ -32,7 +33,9 @@
 			</div>
 		</div>
 	</div>
+
 <!-- Cargo Display -->
+
 	<div class="cargo">
 		<div class="container">
 			<div class="row">
@@ -41,7 +44,9 @@
 						<p><b>Count: </b><span class="toilet-paper-display">0</span></p>
 					</div>
 					<div class="image">
+					<a href="https://www.amazon.com/Charmin-Strong-Toilet-Tissue-Double/dp/B00XBTYQVQ/ref=sr_1_4_s_f_it?ie=UTF8&qid=1509954547&sr=1-4&ppw=fresh&keywords=toilet+paper&dpID=515eG3x5JqL&preST=_SY300_QL70_&dpSrc=srch" target="_blank">
 					<img src="/images/toilet paper roll.png" alt="">
+					</a>
 					</div>
 					<div class="btn-group" role="group" aria-label="Basic example">
 					<button id="toiletPaperMinus" type="button" class="btn btn-secondary">-</button>
@@ -53,7 +58,9 @@
 						<p><b>Count: </b><span class="lunch-box-display">0</span></p>
 					</div>
 					<div class="image">
+					<a href="https://www.amazon.com/Lunchables-Pizza-Nacho-Combo-ct/dp/B07567K6P1/ref=sr_1_6_s_it?s=grocery&ie=UTF8&qid=1509954431&sr=1-6&keywords=lunchables&th=1" target="_blank">
 					<img src="/images/Lunch-box.png" alt="">
+					</a>
 					</div>
 					<div class="btn-group" role="group" aria-label="Basic example">
 					<button id="lunchBoxMinus" type="button" class="btn btn-secondary">-</button>
@@ -65,7 +72,9 @@
 						<p><b>Count: </b><span class="water-display">0</span></p>
 					</div>
 					<div class="image">
+					<a href="https://www.amazon.com/Nestl%C3%A9-Bottled-Purified-Water-Bottles/dp/B00LLKWVL4/ref=br_lf_m_vbsqwmx7xv9s4j5_ttl?_encoding=UTF8&s=home-garden" target="_blank">
 					<img src="/images/water bottle.jpg" alt="">
+					</a>
 					</div>
 					<div class="btn-group" role="group" aria-label="Basic example">
 					<button id="waterMinus" type="button" class="btn btn-secondary">-</button>
@@ -88,11 +97,32 @@
 			<div id="submit">
 				<div class="row">
 					<div class="col-12">
-						<input id="cargoSubmitButton" type="submit" name="Submit" value="Validate Cargo">
+						<input id="cargoSubmitButton" type="submit" name="Submit" value="Validate Cargo" data-toggle="modal" data-target="#validateModal">
 					</div>
 				</div>	
 			</div>
 		</div>
+	</div>
+
+<!-- Validate Modal -->
+
+	<div class="modal fade" id="validateModal" tabindex="-1" role="dialog" aria-labelledby="validateModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 id="validateTitle" class="modal-title" id="validateModalLabel"></h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p id="validateMessage"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
 	</div>
 
 
