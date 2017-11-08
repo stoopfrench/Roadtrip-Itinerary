@@ -1,8 +1,12 @@
 var express =require('express')
+var bodyParser = require('body-parser')
 
 var app = express()
 
 app.use(express.static('./public'))
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.get('/', function(request, response){
 
@@ -58,6 +62,43 @@ app.get('/Cargo-Validator', function(request, response){
 	response.sendFile('./public/html/cargo-val.html', {root: './'})
 
 	console.log('sent cargo-val.html')
+})
+
+app.post('/Cargo-Validator', function(request, response){
+
+	body = request.body
+		
+	console.log(body)
+
+	if(body.cost > 200 && body.weight > 200) {
+
+		console.log('invalid cargo')
+
+		response.send('Invalid Cargo')
+	}
+
+	else if(body.cost > 200 && body.weight < 200) {
+
+		console.log('over budget')
+
+		response.send('Invalid Cargo: Over Budget')
+	}
+
+	else if(body.cost < 200 && body.weight > 200) {
+
+		console.log('over weight')
+
+		response.send('Invalid Cargo: Over the Weight Limit')
+	}
+
+	else {
+
+		console.log('cargo is valid')
+		
+		response.send('Cargo is Valid.')
+	}
+
+
 })
 
 

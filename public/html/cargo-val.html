@@ -14,18 +14,19 @@
 	  <a class="navbar-brand" href="/">
 		<img src="/images/homeicon.png">
 	  </a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
 	</nav>
 	
+	<div id="title">
 	<h1>Cargo Validator</h1>
-	
+	</div>
+
+<!--Totals Display  -->
+
 	<div id="totalDisplay">
 		<div class="container">
 			<div class="row">
 				<div id="totalPrice" class="col-md-12 col-lg-6">
-					<h3>Total: $ <span id="totalPriceDisplay">0.00</span></h3>
+					<h3>Cost: $ <span id="totalPriceDisplay">0.00</span></h3>
 				</div>
 				<div id="totalWeight" class="col-md-12 col-lg-6">
 					<h3>Weight: <span id="totalWeightDisplay">0.00</span> lbs</h3>
@@ -39,7 +40,7 @@
 	<div class="cargo">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-12 box">
+				<div class="col-lg-3 col-md-6 col-xs-12 box">
 					<div>
 						<p><b>Count: </b><span class="toilet-paper-display">0</span></p>
 					</div>
@@ -49,11 +50,11 @@
 					</a>
 					</div>
 					<div class="btn-group" role="group" aria-label="Basic example">
-					<button id="toiletPaperMinus" type="button" class="btn btn-secondary">-</button>
+					<button id="toiletPaperMinus" type="button" class="btn btn-secondary">&minus;</button>
 					<button id="toiletPaperPlus" type="button" class="btn btn-secondary">+</button>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 box">
+				<div class="col-lg-3 col-md-6 col-xs-12 box">
 					<div>
 						<p><b>Count: </b><span class="lunch-box-display">0</span></p>
 					</div>
@@ -63,11 +64,11 @@
 					</a>
 					</div>
 					<div class="btn-group" role="group" aria-label="Basic example">
-					<button id="lunchBoxMinus" type="button" class="btn btn-secondary">-</button>
+					<button id="lunchBoxMinus" type="button" class="btn btn-secondary">&minus;</button>
 					<button id="lunchBoxPlus" type="button" class="btn btn-secondary">+</button>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 box">
+				<div class="col-lg-3 col-md-6 col-xs-12 box">
 					<div>
 						<p><b>Count: </b><span class="water-display">0</span></p>
 					</div>
@@ -77,11 +78,11 @@
 					</a>
 					</div>
 					<div class="btn-group" role="group" aria-label="Basic example">
-					<button id="waterMinus" type="button" class="btn btn-secondary">-</button>
+					<button id="waterMinus" type="button" class="btn btn-secondary">&minus;</button>
 					<button id="waterPlus" type="button" class="btn btn-secondary">+</button>
 					</div>
 				</div>	
-				<div class="col-lg-3 col-md-6 col-sm-12 box">
+				<div class="col-lg-3 col-md-6 col-xs-12 box">
 					<div>
 						<p><b>Count: </b><span class="vest-display">0</span></p>
 					</div>
@@ -89,7 +90,7 @@
 					<img src="/images/bullet-proof-vest.jpg" alt="">
 					</div>
 					<div class="btn-group" role="group" aria-label="Basic example">
-					<button id="vestMinus" type="button" class="btn btn-secondary">-</button>
+					<button id="vestMinus" type="button" class="btn btn-secondary">&minus;</button>
 					<button id="vestPlus" type="button" class="btn btn-secondary">+</button>
 					</div>
 				</div>
@@ -111,7 +112,7 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <h5 id="validateTitle" class="modal-title" id="validateModalLabel"></h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        <button id="xBtn" type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
 	      </div>
@@ -119,14 +120,14 @@
 	        <p id="validateMessage"></p>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" data-dismiss="modal">Close</button>
+	        <button id="closeBtn" type="button" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>
 	  </div>
 	</div>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script src="/js/cargo-val.js"></script>

@@ -24,10 +24,24 @@ $(document).ready(function(){
 	var fixedWeight
 
 
+
 // Toilet-Paper
  
 	$('#toiletPaperMinus').on('click', function(){
 
+
+		if(totalPrice > 0 && tpCount !== 0) {
+
+			totalPrice -= tpPrice
+
+
+		}
+
+		if(totalWeight > 0 && tpCount !== 0) {
+
+			totalWeight -= tpWeight
+
+		}
 
 		if(tpCount > 0) {
 		
@@ -35,20 +49,8 @@ $(document).ready(function(){
 
 		}
 
-		console.log(totalPrice)
+		checkValid()
 
-		if(totalPrice > 0) {
-
-			totalPrice -= tpPrice
-
-
-		}
-
-		if(totalWeight > 0) {
-
-			totalWeight -= tpWeight
-
-		}
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -61,11 +63,16 @@ $(document).ready(function(){
 
 	$('#toiletPaperPlus').on('click', function(){
 
-		tpCount++
-
 		totalPrice += tpPrice
 
 		totalWeight += tpWeight
+
+		tpCount++
+
+		// console.log(totalPrice)
+
+		checkValid()
+
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -79,25 +86,29 @@ $(document).ready(function(){
 // Lunch-Box
  
 	$('#lunchBoxMinus').on('click', function(){
-
-		if(lbCount > 0) {
 		
-		lbCount--
-
-		}
-
-		if(totalPrice > 1) {
+		if(totalPrice > 0 && lbCount !== 0) {
 
 			totalPrice -= lbPrice
 
 
 		}
 
-		if(totalWeight > 1) {
+		if(totalWeight > 0 && lbCount !== 0) {
 
 			totalWeight -= lbWeight
 
 		}
+
+		if(lbCount > 0) {
+		
+		
+			lbCount--
+
+		}
+
+		checkValid()
+
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -110,11 +121,14 @@ $(document).ready(function(){
 
 	$('#lunchBoxPlus').on('click', function(){
 
-		lbCount++
-
 		totalPrice += lbPrice
 
 		totalWeight += lbWeight
+
+		lbCount++
+
+		checkValid()
+
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -129,25 +143,28 @@ $(document).ready(function(){
 // Water
  
 	$('#waterMinus').on('click', function(){
-
-		if(waterCount > 0) {
 		
-		waterCount--
-
-		}
-
-		if(totalPrice > 1) {
+		if(totalPrice > 0 && waterCount !== 0) {
 
 			totalPrice -= waterPrice
 
 
 		}
 
-		if(totalWeight > 1) {
+		if(totalWeight > 0 && waterCount !== 0) {
 
 			totalWeight -= waterWeight
 
 		}
+
+		if(waterCount > 0) {
+		
+			waterCount--
+
+		}
+
+		checkValid()
+
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -160,11 +177,14 @@ $(document).ready(function(){
 
 	$('#waterPlus').on('click', function(){
 
-		waterCount++
-
 		totalPrice += waterPrice
 
 		totalWeight += waterWeight
+
+		waterCount++
+
+		checkValid()
+
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -178,24 +198,27 @@ $(document).ready(function(){
 // Vest
  
 	$('#vestMinus').on('click', function(){
-
-		if(vestCount > 0) {
 		
-		vestCount--
-
-		}
-
-		if(totalPrice > 1) {
+		if(totalPrice > 0 && vestCount !== 0) {
 
 			totalPrice -= vestPrice
 
 		}
 
-		if(totalWeight > 1) {
+		if(totalWeight > 0 && vestCount !== 0) {
 
 			totalWeight -= vestWeight
 
 		}
+
+		if(vestCount > 0) {
+		
+			vestCount--
+
+		}
+
+		checkValid()
+
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -208,11 +231,13 @@ $(document).ready(function(){
 
 	$('#vestPlus').on('click', function(){
 
-		vestCount++
-
 		totalPrice += vestPrice
 
 		totalWeight += vestWeight
+
+		vestCount++
+
+		checkValid()
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -223,33 +248,58 @@ $(document).ready(function(){
 
 	})
 
-	$('#cargoSubmitButton').on('click', function(){
+	var checkValid = function(){
 
 
-		if(totalPrice <= 200 && totalWeight  <= 200) {
+		if (totalPrice > 200) {
 
-			$('#validateTitle').text('Congratulations')
-			$('#validateMessage').text('Cargo Valid')
+			$('#totalPrice').css({"color":"red"})
+			$('#cargoSubmitButton').css({"opacity":"0.3"})
+
 		}
 
-		if (totalPrice > 200 && totalWeight > 200) {
+		else if (totalWeight > 200) {
 
-			$('#validateTitle').text('Invalid Cargo')
-			$('#validateMessage').text('Over weight and over budget.')
+			$('#totalWeight').css({"color":"red"})
+			$('#cargoSubmitButton').css({"opacity":"0.3"})
+		}	
+
+		else {
+
+			$('#cargoSubmitButton').css({"opacity":"1"})
+			$('#totalPrice').css({"color":"black"})
+			$('#totalWeight').css({"color":"black"})
+
+		}
+	}
+
+
+
+	$('#cargoSubmitButton').on('click', function() {
+
+
+		if(totalPrice === 0 && totalWeight === 0) {
+
+			$('#validateTitle').text('Missing Cargo')
+			$('#validateMessage').text('No cargo has been added.')
+		
 		}
 
-		if(totalPrice > 200 && totalWeight < 200) {
+		else {
 
-			$('#validateTitle').text('Invalid Cargo')
-			$('#validateMessage').text('Over budget.')
+			var sendData = {cost: totalPrice.toFixed(2), weight : totalWeight.toFixed(2), toiletPaper : tpCount, lunchBox : lbCount, water : waterCount, vest : vestCount}
+
+			$.post('/Cargo-Validator', sendData, function(data) {
+
+				// console.log(data)
+
+				$('#validateTitle').text('Server Validation')
+				$('#validateMessage').text(data)
+			
+			})
 		}
-
-		if(totalWeight < 200 && totalWeight > 200) {
-
-			$('#validateMessage').text('Over the weight limit.')
-
-		} 
 	
+		
 	})	
 
 })
