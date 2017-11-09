@@ -251,18 +251,26 @@ $(document).ready(function(){
 	var checkValid = function(){
 
 
-		if (totalPrice > 200) {
+		if (totalPrice > 200 && totalWeight > 200) {
+
+			$('#totalPrice').css({"color":"red"})
+			$('#totalWeight').css({"color":"red"})
+			$('#cargoSubmitButton').css({"opacity":"0.3"})
+		}
+
+		else if (totalPrice > 200 && totalWeight < 200) {	
+
 
 			$('#totalPrice').css({"color":"red"})
 			$('#cargoSubmitButton').css({"opacity":"0.3"})
-
 		}
 
-		else if (totalWeight > 200) {
+		else if (totalPrice < 200 && totalWeight > 200) {	
+
 
 			$('#totalWeight').css({"color":"red"})
 			$('#cargoSubmitButton').css({"opacity":"0.3"})
-		}	
+		}
 
 		else {
 

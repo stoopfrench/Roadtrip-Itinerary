@@ -74,7 +74,7 @@ app.post('/Cargo-Validator', function(request, response){
 
 		console.log('invalid cargo')
 
-		response.send('Invalid Cargo')
+		response.send('Invalid Cargo: Over Budget AND Over the Weight Limit')
 	}
 
 	else if(body.cost > 200 && body.weight < 200) {
