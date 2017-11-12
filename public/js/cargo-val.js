@@ -248,7 +248,35 @@ $(document).ready(function(){
 
 	})
 
-	var checkValid = function(){
+
+	$('#cargoSubmitButton').on('click', function() {
+
+
+		if(totalPrice === 0 && totalWeight === 0) {
+
+			$('#validateTitle').text('Missing Cargo')
+			$('#validateMessage').text('No cargo has been added.')
+		
+		}
+
+		else {
+
+			var sendData = {cost: totalPrice.toFixed(2), weight : totalWeight.toFixed(2), toiletPaper : tpCount, lunchBox : lbCount, water : waterCount, vest : vestCount}
+
+			$.post('/Cargo-Validator', sendData, function(data) {
+
+				// console.log(data)
+
+				$('#validateTitle').text('Server Validation')
+				$('#validateMessage').text(data)
+			
+			})
+		}
+	
+		
+	})
+
+		var checkValid = function(){
 
 
 		if (totalPrice > 200 && totalWeight > 200) {
@@ -281,33 +309,6 @@ $(document).ready(function(){
 		}
 	}
 
-
-
-	$('#cargoSubmitButton').on('click', function() {
-
-
-		if(totalPrice === 0 && totalWeight === 0) {
-
-			$('#validateTitle').text('Missing Cargo')
-			$('#validateMessage').text('No cargo has been added.')
-		
-		}
-
-		else {
-
-			var sendData = {cost: totalPrice.toFixed(2), weight : totalWeight.toFixed(2), toiletPaper : tpCount, lunchBox : lbCount, water : waterCount, vest : vestCount}
-
-			$.post('/Cargo-Validator', sendData, function(data) {
-
-				// console.log(data)
-
-				$('#validateTitle').text('Server Validation')
-				$('#validateMessage').text(data)
-			
-			})
-		}
 	
-		
-	})	
 
 })

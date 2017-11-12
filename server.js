@@ -8,6 +8,7 @@ app.use(express.static('./public'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+//SEND MAIN HTML
 app.get('/', function(request, response){
 
  	response.sendFile('./public/html/index.html', {root: './'})
@@ -15,6 +16,7 @@ app.get('/', function(request, response){
  	console.log('sent index.html')
 })
 
+//SEND DENVER HTML
 app.get('/Denver', function(request, response){
 
 	response.sendFile('./public/html/denver.html', {root: './'})
@@ -22,6 +24,7 @@ app.get('/Denver', function(request, response){
 	console.log('sent denver.html')
 })
 
+//SEND KC HTML
 app.get('/Kansas-City', function(request, response){
 
 	response.sendFile('./public/html/kansas-city.html', {root: './'})
@@ -29,6 +32,7 @@ app.get('/Kansas-City', function(request, response){
 	console.log('sent kansas-city.html')
 })
 
+//SEND NASHVILLE HTML
 app.get('/Nashville', function(request, response){
 
 	response.sendFile('./public/html/nashville.html', {root: './'})
@@ -36,6 +40,7 @@ app.get('/Nashville', function(request, response){
 	console.log('sent nashville.html')
 })
 
+//SEND ATLANTA HTML
 app.get('/Atlanta', function(request, response){
 
 	response.sendFile('./public/html/atlanta.html', {root: './'})
@@ -43,6 +48,7 @@ app.get('/Atlanta', function(request, response){
 	console.log('sent atlanta.html')
 })
 
+//SEND CHARLESTON HTML
 app.get('/Charleston', function(request, response){
 
 	response.sendFile('./public/html/charleston.html', {root: './'})
@@ -50,6 +56,7 @@ app.get('/Charleston', function(request, response){
 	console.log('sent charleston.html')
 })
 
+//SEND END HTML
 app.get('/End', function(request, response){
 
 	response.sendFile('./public/html/end.html', {root: './'})
@@ -57,6 +64,7 @@ app.get('/End', function(request, response){
 	console.log('sent end.html')
 })
 
+//SEND CARGO-VALIDATOR HTML
 app.get('/Cargo-Validator', function(request, response){
 
 	response.sendFile('./public/html/cargo-val.html', {root: './'})
@@ -64,6 +72,7 @@ app.get('/Cargo-Validator', function(request, response){
 	console.log('sent cargo-val.html')
 })
 
+//CHECK IF CARGO IS VALID
 app.post('/Cargo-Validator', function(request, response){
 
 	body = request.body
@@ -98,11 +107,7 @@ app.post('/Cargo-Validator', function(request, response){
 		response.send('Cargo is Valid.')
 	}
 
-
 })
-
-
-
 
 
 app.listen(8080, function(){
