@@ -23,9 +23,41 @@ $(document).ready(function(){
 	var fixedPrice
 	var fixedWeight
 
+// ============================================================================================================================================
+	
+	$('#clearModalButton').hide()
+
+//CLEAR CARGO BUTTON ==========================================================================================================================
+
+	$('#clearButton').on('click', function(){
 
 
-// Toilet-Paper
+	totalPrice = 0
+	totalWeight = 0
+	tpCount = 0
+	lbCount = 0
+	waterCount = 0
+	vestCount = 0
+	var fixedPrice = totalPrice.toFixed(2)
+	var fixedWeight = totalWeight.toFixed(2)
+
+
+	$('#totalPriceDisplay').text(fixedPrice)
+	$('#totalWeightDisplay').text(fixedWeight)
+	$('.toilet-paper-display').text(tpCount)
+	$('.lunch-box-display').text(lbCount)
+	$('.water-display').text(waterCount)
+	$('.vest-display').text(vestCount)
+
+	checkValid()
+
+	toggleCargoButton()
+	
+	})
+
+
+
+// TOILET PAPER ===================================================================================================================================================================
  
 	$('#toiletPaperMinus').on('click', function(){
 
@@ -51,6 +83,8 @@ $(document).ready(function(){
 
 		checkValid()
 
+		toggleCargoButton()
+
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -73,6 +107,7 @@ $(document).ready(function(){
 
 		checkValid()
 
+		toggleCargoButton()
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -83,7 +118,7 @@ $(document).ready(function(){
 
 	})
 
-// Lunch-Box
+// LUNCH BOX ===================================================================================================================================================================
  
 	$('#lunchBoxMinus').on('click', function(){
 		
@@ -109,6 +144,7 @@ $(document).ready(function(){
 
 		checkValid()
 
+		toggleCargoButton()
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -129,6 +165,7 @@ $(document).ready(function(){
 
 		checkValid()
 
+		toggleCargoButton()
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -140,7 +177,7 @@ $(document).ready(function(){
 	})
 
 
-// Water
+// WATER ===================================================================================================================================================================
  
 	$('#waterMinus').on('click', function(){
 		
@@ -165,6 +202,7 @@ $(document).ready(function(){
 
 		checkValid()
 
+		toggleCargoButton()
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -185,6 +223,7 @@ $(document).ready(function(){
 
 		checkValid()
 
+		toggleCargoButton()
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -195,7 +234,7 @@ $(document).ready(function(){
 
 	})	
 
-// Vest
+// VEST ===================================================================================================================================================================
  
 	$('#vestMinus').on('click', function(){
 		
@@ -219,6 +258,7 @@ $(document).ready(function(){
 
 		checkValid()
 
+		toggleCargoButton()
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -238,6 +278,8 @@ $(document).ready(function(){
 		vestCount++
 
 		checkValid()
+
+		toggleCargoButton()
 
 		var fixedPrice = totalPrice.toFixed(2)
 		var fixedWeight = totalWeight.toFixed(2)
@@ -276,6 +318,9 @@ $(document).ready(function(){
 		
 	})
 
+
+// FUNCTIONS ===================================================================================================================================================================
+
 		var checkValid = function(){
 
 
@@ -309,6 +354,20 @@ $(document).ready(function(){
 		}
 	}
 
-	
+	var toggleCargoButton = function(){
 
+		if(totalPrice <= 0 && totalWeight <= 0) {
+			
+			$('#clearModalButton').hide()
+		}
+
+		else {
+
+			$('#clearModalButton').show()
+
+		}
+	}
+
+
+	
 })

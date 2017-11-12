@@ -51,6 +51,15 @@ h1 {
 	padding: 1rem;
 }
 
+#totalDisplay {
+
+	border: 3px solid black;
+	background-color: #dedede;
+	position: sticky;
+	top: 0px; 
+	z-index: 1000;
+}
+
 .image {
 
 	box-sizing: border-box;
@@ -63,8 +72,6 @@ h1 {
 	text-align: center;
 	padding: .5rem;
 	background-color: #dedede;
-
-
 }
 
 .cargo {
@@ -83,17 +90,37 @@ h1 {
 
 	text-align: center;
 	margin: 3rem;
+	margin-bottom: 1rem;
 
 }
 
 #cargoSubmitButton {
 
 	background-color: #353A3F;
+	border: 1px solid black;
 	color: white;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	outline-color: black;
 	
+}
+
+#clear {
+
+	text-align: center;
+}
+
+#clearModalButton {
+
+	/*box-sizing: border-box;*/
+	border: 1px solid black;
+	background-color: red;
+	color: white;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	outline-color: black;
+	font-size: .75rem;
+	outline-color: red;
 }
 
 .btn.btn-secondary {
@@ -106,16 +133,6 @@ h1 {
 	outline: none;
 
 }
-
-#totalDisplay {
-
-	border: 3px solid black;
-	background-color: #dedede;
-	position: sticky;
-	top: 0px; 
-	z-index: 1000;
-}
-
 
 .modal-header  {
 

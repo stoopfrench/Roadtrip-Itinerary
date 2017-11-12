@@ -95,10 +95,19 @@
 					</div>
 				</div>
 			</div>
+
+<!-- VALIDATE SUBMIT -->
 			<div id="submit">
 				<div class="row">
 					<div class="col-12">
 						<input id="cargoSubmitButton" type="submit" name="Submit" value="Validate Cargo" data-toggle="modal" data-target="#validateModal">
+					</div>
+				</div>	
+			</div>
+			<div id="clear">
+				<div class="row">
+					<div class="col-12">
+						<input id="clearModalButton" type="button" name="Clear" value="CLEAR ALL" data-toggle="modal" data-target="#clearModal">
 					</div>
 				</div>	
 			</div>
@@ -125,6 +134,29 @@
 	    </div>
 	  </div>
 	</div>
+
+<!-- Clear Modal -->
+	
+	<div class="modal fade" id="clearModal" tabindex="-1" role="dialog" aria-labelledby="clearModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="clearModalLabel">Clear All?</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        Are you sure you want to Clear All Cargo?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" data-dismiss="modal">Close</button>
+	        <button id="clearButton" type="button" data-dismiss="modal">Confirm</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
