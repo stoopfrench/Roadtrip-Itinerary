@@ -24,7 +24,7 @@ app.get('/Denver', function(request, response){
 	console.log('sent denver.html')
 })
 
-//SEND KC HTML
+//SEND KANSAS CITY HTML
 app.get('/Kansas-City', function(request, response){
 
 	response.sendFile('./public/html/kansas-city.html', {root: './'})
@@ -109,8 +109,9 @@ app.post('/Cargo-Validator', function(request, response){
 
 })
 
+var port = 8080
 
-app.listen(8080, function(){
+app.listen(port, function(){
 
-	console.log("'Roadtrip_Itinerary' on port 8080")
+	console.log("'Roadtrip_Itinerary' on port " + port)
 })

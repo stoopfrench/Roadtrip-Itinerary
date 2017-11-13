@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+//Variables
 	
 	var tpCount = 0
 	var tpPrice = 11.85
@@ -369,5 +369,4 @@ $(document).ready(function(){
 	}
 
 
-	
-})
+})	
